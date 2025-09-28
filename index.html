@@ -115,5 +115,45 @@
     document.getElementById("originalsGrid").innerHTML = originals;
     document.getElementById("printsGrid").innerHTML = prints;
   </script>
+  <script>
+  // Artwork list: change file names to match your actual uploads in /images
+  const ART = [
+    {title:"IMG_2AF18996", file:"IMG_2AF18996.jpg", size:"~29\" × 40\"", price:3350, type:"original"},
+    {title:"IMG_C876C930", file:"IMG_C876C930.jpg", size:"~18\" × 24\"", price:950, type:"original"},
+    {title:"IMG_33AEC33", file:"IMG_33AEC33.jpg", size:"~12\" × 12\"", price:350, type:"original"},
+    {title:"IMG_0250", file:"IMG_0250.jpg", size:"~12\" × 12\"", price:350, type:"original"},
+    {title:"IMG_0322", file:"IMG_0322.jpg", size:"~18\" × 24\"", price:950, type:"original"},
+    {title:"IMG_0254", file:"IMG_0254.jpg", size:"~29\" × 40\"", price:3350, type:"original"},
+    {title:"IMG_0255", file:"IMG_0255.jpg", size:"~18\" × 24\"", price:950, type:"original"},
+    {title:"IMG_3C6000A", file:"IMG_3C6000A.jpg", size:"~29\" × 40\"", price:3350, type:"original"},
+    {title:"IMG_8301", file:"IMG_8301.jpg", size:"~12\" × 12\"", price:350, type:"original"},
+    {title:"IMG_72D95A9", file:"IMG_72D95A9.jpg", size:"~18\" × 24\"", price:950, type:"original"},
+    {title:"IMG_DDA40F7", file:"IMG_DDA40F7.jpg", size:"~29\" × 40\"", price:3350, type:"original"},
+    {title:"IMG_F48D1338", file:"IMG_F48D1338.jpg", size:"~12\" × 12\"", price:350, type:"original"},
+    {title:"IMG_F0192B1", file:"IMG_F0192B1.jpg", size:"~18\" × 24\"", price:950, type:"original"},
+    {title:"IMG_F48D3AE", file:"IMG_F48D3AE.jpg", size:"~29\" × 40\"", price:3350, type:"original"}
+  ];
+
+  function card(a){
+    const price = a.type==="print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
+    return `
+      <article class="card">
+        <img src="images/${a.file}" alt="${a.title}">
+        <div class="pad">
+          <div class="tag">${a.type}</div>
+          <div class="title">${a.title}</div>
+          <div class="meta">${a.size}</div>
+          <div class="price">${price}</div>
+          <div class="row">
+            <a class="btn" href="https://instagram.com/sham.labs" target="_blank">DM to Claim</a>
+            <a class="btn" href="https://paypal.me/shamlabs" target="_blank">PayPal</a>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  document.getElementById("originalsGrid").innerHTML =
+    ART.filter(a=>a.type==="original").map(card).join("");
+
 </body>
 </html>
