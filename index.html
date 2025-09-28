@@ -5,73 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SHAM LABS // TURBULENCE</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-  <<link rel="stylesheet" href="style.css">>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="overlay"></div>
-  <audio autoplay loop class="ambient">
-    <source src="https://filesamples.com/samples/audio/mp3/sample3.mp3" type="audio/mp3" />
-  </audio>
+
   <main>
     <header>
       <h1>SHAM LABS // ART FOR SURVIVAL</h1>
-      <p>I paint because I have to. Every piece comes from pressure, chaos, and trying to keep my head above water. Nothing here is mass-produced, nothing here is safe.</p>
+      <p>I paint because I have to. Pressure in, artwork out. Nothing here is mass-produced.</p>
       <p><strong>Each one is <em>one of one</em></strong> — when it’s gone, it’s gone.</p>
-      <a href="#claim" class="cta">Claim Yours Now</a>
+      <a href="#originals" class="cta">Claim Yours Now</a>
     </header>
 
     <section class="series" id="series">
       <h2>TURBULENCE SERIES</h2>
       <p>A visceral exploration of chaos, control, and the survival instinct. 9 original works that capture the essence of navigating life’s unpredictable currents.</p>
+
       <div class="tiers">
         <div>
-          <h3>Small (12" x 12")</h3>
-          <p>$350 — High intensity, concentrated focus</p>
+          <h3>Small (12" × 12")</h3>
+          <p>$350 — high-intensity, concentrated focus</p>
         </div>
         <div>
-          <h3>Medium (18" x 24")</h3>
-          <p>$950 — Expanded narrative, deeper symbolism</p>
+          <h3>Medium (18" × 24")</h3>
+          <p>$950 — expanded narrative, deeper symbolism</p>
         </div>
         <div>
-          <h3>Large (29" x 40")</h3>
-          <p>$3,350 — Comprehensive visual journey, maximum impact</p>
+          <h3>Large (29" × 40")</h3>
+          <p>$3,350 — comprehensive visual journey, maximum impact</p>
         </div>
       </div>
-      <p><strong>Status:</strong> <span class="status">LIMITED AVAILABILITY — 4/9 CLAIMED</span></p>
+
+      <p><strong>Status:</strong> <span class="status">LIMITED AVAILABILITY</span></p>
     </section>
 
-    <section class="prints">
+    <!-- Originals grid (auto-rendered) -->
+    <section class="series" id="originals">
+      <h2>Originals</h2>
+      <div id="originalsGrid" class="gallery"></div>
+    </section>
+
+    <!-- Prints grid (auto-rendered) -->
+    <section class="prints" id="prints">
       <h2>Limited Print Run</h2>
       <ul>
         <li>Select pieces as museum-quality prints</li>
         <li>Hand-written note from the artist</li>
-        <li>Exclusive "Turbulence" sticker pack</li>
+        <li>Exclusive “Turbulence” sticker pack</li>
         <li>Numbered edition (25 only)</li>
         <li><strong>Price:</strong> $125</li>
       </ul>
+
+      <div id="printsGrid" class="gallery"></div>
     </section>
 
-    <section class="zine">
-      <h2>"TURBULENCE" ZINE — PRE-ORDER</h2>
-      <p>Full-color documentation of the series w/ process notes & sketches</p>
-      <ul>
-        <li>Limited run: 100 hand-numbered copies</li>
-        <li>Regular price: $45</li>
-        <li><strong>Pre-order now with $20 deposit</strong></li>
-        <li>Shipping: Oct 2025 — <span class="status">ONLY 37 COPIES LEFT</span></li>
-      </ul>
-    </section>
-
-    <section class="claim" id="claim">
+    <section class="claim" id="claim" style="padding-top:2rem">
       <h2>Ready to Claim Your Piece?</h2>
-      <p>Every artwork represents my journey through chaos to clarity. Reach out to make one part of yours.</p>
+      <p>Fastest: DM <a href="https://instagram.com/sham.labs" target="_blank" rel="noopener">@sham.labs</a>.  
+         Email: <a href="mailto:shamwithacan@gmail.com">shamwithacan@gmail.com</a></p>
       <ul>
-        <li><strong>Instagram:</strong> <a href="https://instagram.com/sham.labs">@sham.labs</a></li>
-        <li><strong>Email:</strong> <a href="mailto:shamwithacan@gmail.com">shamwithacan@gmail.com</a></li>
-        <li><strong>CashApp:</strong> <a href="https://cash.app/$shampayment">$shampayment</a></li>
-        <li><strong>PayPal:</strong> <a href="https://paypal.me/shamlabs">paypal.me/shamlabs</a></li>
+        <li><strong>PayPal:</strong> <a href="https://paypal.me/shamlabs" target="_blank" rel="noopener">paypal.me/shamlabs</a></li>
+        <li><strong>Cash App:</strong> <a href="https://cash.app/$shampayment" target="_blank" rel="noopener">$shampayment</a></li>
+        <li><strong>Note:</strong> include piece title, size, and shipping address. $20 deposit holds for 48h.</li>
       </ul>
     </section>
   </main>
+
+  <!-- tiny render script -->
+  <script>
+    // title, file in /images, estimated size, price, type
+    const ART = [
+      // Originals (pick the strongest; add more as needed)
+      {title:"Watcher’s Flood", file:"watchers-flood.jpg", size:'~29" × 40"', price:3350, type:"original"},
+      {title:"Pressure Window", file:"pressure-window.jpg", size:'~18" × 24"', price:950,  type:"original"},
+      {title:"Blue Static",     file:"blue-static.jpg",     size:'~18" × 24"', price:950,  type:"original"},
+      {title:"Signal Drift",    file:"signal-drift.jpg",    size:'~12" × 12"', price:350,  type:"original"},
+      {title:"Street Echo",     file:"street-echo.jpg",     size:'~12" × 12"', price:350,  type:"original"},
+      {title:"Floodgate",       file:"floodgate.jpg",       size:'~29" × 40"', price:3350, type:"original"},
+
+      // Prints (same art files, different type/price)
+      {title:"Watcher’s Flood — Print", file:"watchers-flood.jpg", size:'12" × 16"', price:125, type:"print"},
+      {title:"Pressure Window — Print", file:"pressure-window.jpg", size:'12" × 16"', price:125, type:"print"},
+      {title:"Blue Static — Print",     file:"blue-static.jpg",     size:'12" × 16"', price:125, type:"print"},
+      {title:"Signal Drift — Print",    file:"signal-drift.jpg",    size:'12" × 16"', price:125, type:"print"}
+    ];
+
+    function card(a){
+      const label = a.type === "print" ? "print" : "original";
+      const price = a.type === "print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
+      return `
+        <article class="card">
+          <img loading="lazy" src="images/${a.file}" alt="${a.title}">
+          <div class="pad">
+            <div class="tag">${label}</div>
+            <div class="title">${a.title}</div>
+            <div class="meta">${a.size}</div>
+            <div class="price">${price}</div>
+            <div class="row">
+              <a class="btn" href="https://instagram.com/sham.labs" target="_blank" rel="noopener">DM to Claim</a>
+              <a class="btn" href="https://paypal.me/shamlabs" target="_blank" rel="noopener">PayPal</a>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    const originals = ART.filter(x=>x.type==="original").map(card).join("");
+    const prints = ART.filter(x=>x.type==="print").map(card).join("");
+    document.getElementById("originalsGrid").innerHTML = originals;
+    document.getElementById("printsGrid").innerHTML = prints;
+  </script>
 </body>
 </html>
