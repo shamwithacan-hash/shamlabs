@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay"></div>
-
   <main>
     <header>
       <h1>SHAM LABS // ART FOR SURVIVAL</h1>
@@ -20,33 +18,24 @@
 
     <section class="series" id="series">
       <h2>TURBULENCE SERIES</h2>
-      <p>A visceral exploration of chaos, control, and the survival instinct. 9 original works that capture the essence of navigating life’s unpredictable currents.</p>
+      <p>A visceral exploration of chaos, control, and the survival instinct. Original works that capture the essence of navigating life’s unpredictable currents.</p>
 
       <div class="tiers">
-        <div>
-          <h3>Small (12" × 12")</h3>
-          <p>$350 — high-intensity, concentrated focus</p>
-        </div>
-        <div>
-          <h3>Medium (18" × 24")</h3>
-          <p>$950 — expanded narrative, deeper symbolism</p>
-        </div>
-        <div>
-          <h3>Large (29" × 40")</h3>
-          <p>$3,350 — comprehensive visual journey, maximum impact</p>
-        </div>
+        <div><h3>Small (12" × 12")</h3><p>$350 — high-intensity, concentrated focus</p></div>
+        <div><h3>Medium (18" × 24")</h3><p>$950 — expanded narrative, deeper symbolism</p></div>
+        <div><h3>Large (29" × 40")</h3><p>$3,350 — comprehensive visual journey, maximum impact</p></div>
       </div>
 
       <p><strong>Status:</strong> <span class="status">LIMITED AVAILABILITY</span></p>
     </section>
 
-    <!-- Originals grid (auto-rendered) -->
+    <!-- Originals grid -->
     <section class="series" id="originals">
       <h2>Originals</h2>
       <div id="originalsGrid" class="gallery"></div>
     </section>
 
-    <!-- Prints grid (auto-rendered) -->
+    <!-- Prints grid -->
     <section class="prints" id="prints">
       <h2>Limited Print Run</h2>
       <ul>
@@ -56,55 +45,50 @@
         <li>Numbered edition (25 only)</li>
         <li><strong>Price:</strong> $125</li>
       </ul>
-
       <div id="printsGrid" class="gallery"></div>
     </section>
 
-    <section class="claim" id="claim" style="padding-top:2rem">
+    <section class="claim" id="claim">
       <h2>Ready to Claim Your Piece?</h2>
-      <p>Fastest: DM <a href="https://instagram.com/sham.labs" target="_blank" rel="noopener">@sham.labs</a>.  
+      <p>Fastest: DM <a href="https://instagram.com/sham.labs" target="_blank">@sham.labs</a><br>
          Email: <a href="mailto:shamwithacan@gmail.com">shamwithacan@gmail.com</a></p>
       <ul>
-        <li><strong>PayPal:</strong> <a href="https://paypal.me/shamlabs" target="_blank" rel="noopener">paypal.me/shamlabs</a></li>
-        <li><strong>Cash App:</strong> <a href="https://cash.app/$shampayment" target="_blank" rel="noopener">$shampayment</a></li>
+        <li><strong>PayPal:</strong> <a href="https://paypal.me/shamlabs" target="_blank">paypal.me/shamlabs</a></li>
+        <li><strong>Cash App:</strong> <a href="https://cash.app/$shampayment" target="_blank">$shampayment</a></li>
         <li><strong>Note:</strong> include piece title, size, and shipping address. $20 deposit holds for 48h.</li>
       </ul>
     </section>
   </main>
 
-  <!-- tiny render script -->
   <script>
-    // title, file in /images, estimated size, price, type
     const ART = [
-      // Originals (pick the strongest; add more as needed)
-      {title:"Watcher’s Flood", file:"watchers-flood.jpg", size:'~29" × 40"', price:3350, type:"original"},
-      {title:"Pressure Window", file:"pressure-window.jpg", size:'~18" × 24"', price:950,  type:"original"},
-      {title:"Blue Static",     file:"blue-static.jpg",     size:'~18" × 24"', price:950,  type:"original"},
-      {title:"Signal Drift",    file:"signal-drift.jpg",    size:'~12" × 12"', price:350,  type:"original"},
-      {title:"Street Echo",     file:"street-echo.jpg",     size:'~12" × 12"', price:350,  type:"original"},
-      {title:"Floodgate",       file:"floodgate.jpg",       size:'~29" × 40"', price:3350, type:"original"},
+      // Originals
+      {title:"Watcher’s Flood", file:"IMG_0250.jpeg", size:'~29" × 40"', price:3350, type:"original"},
+      {title:"Pressure Window", file:"IMG_0252.jpeg", size:'~18" × 24"', price:950,  type:"original"},
+      {title:"Blue Static",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'~12" × 12"', price:350,  type:"original"},
+      {title:"Street Echo",     file:"IMG_67C89C30-44E1-4A56-86C1-37E10C05C606.jpeg", size:'~12" × 12"', price:350,  type:"original"},
+      {title:"Floodgate",       file:"IMG_72905459-6C45-4F6C-86C1-04FE6C606086.jpeg", size:'~29" × 40"', price:3350, type:"original"},
 
-      // Prints (same art files, different type/price)
-      {title:"Watcher’s Flood — Print", file:"watchers-flood.jpg", size:'12" × 16"', price:125, type:"print"},
-      {title:"Pressure Window — Print", file:"pressure-window.jpg", size:'12" × 16"', price:125, type:"print"},
-      {title:"Blue Static — Print",     file:"blue-static.jpg",     size:'12" × 16"', price:125, type:"print"},
-      {title:"Signal Drift — Print",    file:"signal-drift.jpg",    size:'12" × 16"', price:125, type:"print"}
+      // Prints
+      {title:"Watcher’s Flood — Print", file:"IMG_0250.jpeg", size:'12" × 16"', price:125, type:"print"},
+      {title:"Pressure Window — Print", file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"},
+      {title:"Blue Static — Print",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'12" × 16"', price:125, type:"print"},
+      {title:"Signal Drift — Print",    file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"} 
     ];
 
     function card(a){
-      const label = a.type === "print" ? "print" : "original";
-      const price = a.type === "print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
+      const price = a.type==="print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
       return `
         <article class="card">
-          <img loading="lazy" src="images/${a.file}" alt="${a.title}">
+          <img loading="lazy" src="${a.file}" alt="${a.title}">
           <div class="pad">
-            <div class="tag">${label}</div>
+            <div class="tag">${a.type}</div>
             <div class="title">${a.title}</div>
             <div class="meta">${a.size}</div>
             <div class="price">${price}</div>
             <div class="row">
-              <a class="btn" href="https://instagram.com/sham.labs" target="_blank" rel="noopener">DM to Claim</a>
-              <a class="btn" href="https://paypal.me/shamlabs" target="_blank" rel="noopener">PayPal</a>
+              <a class="btn" href="https://instagram.com/sham.labs" target="_blank">DM to Claim</a>
+              <a class="btn" href="https://paypal.me/shamlabs" target="_blank">PayPal</a>
             </div>
           </div>
         </article>`;
@@ -115,41 +99,5 @@
     document.getElementById("originalsGrid").innerHTML = originals;
     document.getElementById("printsGrid").innerHTML = prints;
   </script>
-  <script>
-  // Artwork list: change file names to match your actual uploads in /images
-  const ART = [
-    // Artbank list: updated to match actual uploaded files
-const ART = [
-  {title:"Watcher’s Flood", file:"IMG_0250.jpeg", size:"29\" x 40\"", price:3350, type:"original"},
-  {title:"Pressure Window", file:"IMG_0252.jpeg", size:"18\" x 24\"", price:950, type:"original"},
-  {title:"Blue Static", file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:"12\" x 12\"", price:350, type:"original"},
-  {title:"Street Echo", file:"IMG_67C89C30-44E1-4A56-86C1-37E10C05C606.jpeg", size:"12\" x 12\"", price:350, type:"original"},
-  {title:"Floodgate", file:"IMG_72905459-6C45-4F6C-86C1-04FE6C606086.jpeg", size:"29\" x 40\"", price:3350, type:"original"}
-];
-
-   
-  ];
-
-  function card(a){
-    const price = a.type==="print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
-    return `
-      <article class="card">
-        <img src="images/${a.file}" alt="${a.title}">
-        <div class="pad">
-          <div class="tag">${a.type}</div>
-          <div class="title">${a.title}</div>
-          <div class="meta">${a.size}</div>
-          <div class="price">${price}</div>
-          <div class="row">
-            <a class="btn" href="https://instagram.com/sham.labs" target="_blank">DM to Claim</a>
-            <a class="btn" href="https://paypal.me/shamlabs" target="_blank">PayPal</a>
-          </div>
-        </div>
-      </article>`;
-  }
-
-  document.getElementById("originalsGrid").innerHTML =
-    ART.filter(a=>a.type==="original").map(card).join("");
-
 </body>
 </html>
