@@ -63,18 +63,21 @@
   <script>
     const ART = [
       // Originals
-      {title:"Watcher’s Flood", file:"IMG_0250.jpeg", size:'~29" × 40"', price:3350, type:"original"},
-      {title:"Pressure Window", file:"IMG_0252.jpeg", size:'~18" × 24"', price:950,  type:"original"},
-      {title:"Blue Static",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'~12" × 12"', price:350,  type:"original"},
-      {title:"Street Echo",     file:"IMG_67C89C30-44E1-4A56-86C1-37E10C05C606.jpeg", size:'~12" × 12"', price:350,  type:"original"},
-      {title:"Floodgate",       file:"IMG_72905459-6C45-4F6C-86C1-04FE6C606086.jpeg", size:'~29" × 40"', price:3350, type:"original"},
+     const ART = [
+  // Originals
+  {title:"Watcher’s Flood", file:"IMG_0250.jpeg", size:'~29" × 40"', price:3350, type:"original"},
+  {title:"Pressure Window", file:"IMG_0252.jpeg", size:'~18" × 24"', price:950,  type:"original"},
+  {title:"Blue Static",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'~12" × 12"', price:350,  type:"original"},
+  {title:"Street Echo",     file:"IMG_67C89C30-44E1-4A56-86C1-37E10C05C606.jpeg", size:'~12" × 12"', price:350,  type:"original"},
+  {title:"Floodgate",       file:"IMG_72905459-6C45-4F6C-86C1-04FE6C606086.jpeg", size:'~29" × 40"', price:3350, type:"original"},
 
-      // Prints
-      {title:"Watcher’s Flood — Print", file:"IMG_0250.jpeg", size:'12" × 16"', price:125, type:"print"},
-      {title:"Pressure Window — Print", file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"},
-      {title:"Blue Static — Print",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'12" × 16"', price:125, type:"print"},
-      {title:"Signal Drift — Print",    file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"} 
-    ];
+  // Prints
+  {title:"Watcher’s Flood — Print", file:"IMG_0250.jpeg", size:'12" × 16"', price:125, type:"print"},
+  {title:"Pressure Window — Print", file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"},
+  {title:"Blue Static — Print",     file:"IMG_33AEC33A-47CB-467B-8509-26737E58D1C5.jpeg", size:'12" × 16"', price:125, type:"print"},
+  {title:"Signal Drift — Print",    file:"IMG_0252.jpeg", size:'12" × 16"', price:125, type:"print"}
+];
+
 
     function card(a){
       const price = a.type==="print" ? `$${a.price} — Limited (25)` : `$${a.price} — Original`;
